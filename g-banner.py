@@ -17,7 +17,7 @@ def scan_port(target, port):
         print("[INFO] {ip}'s TCP port {port} is open !".format(ip=target, port=port))
     
     except Exception:
-        print("[INfO] {target}'s TCP port {port} is closed !".format(target=target, port=port))
+        print("[INfO] {target}'s TCP port {port} is closed|filtered !".format(target=target, port=port))
         return
         
     try:
