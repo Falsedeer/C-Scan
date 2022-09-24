@@ -58,11 +58,11 @@ def main():
     parser.add_option("-p", "--port", type="string", dest="ports", action="callback", callback=gen_portlist, help="Specify the target ports seperated in comma(without space)")
     (options, args) = parser.parse_args()
     
-    if (str(options.host) == 'None'):
+    if options.host is None:
         print(parser.get_usage())
         sys.exit(0)
         
-    elif (str(options.ports[0]) == 'None'):
+    elif options.ports is None:
         print(parser.get_usage())
         sys.exit(0)
         
